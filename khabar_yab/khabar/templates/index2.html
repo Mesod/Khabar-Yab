@@ -1,0 +1,70 @@
+{% load static %}
+
+<html>
+
+<head>
+    <html dir="rtl" lang="fa">
+
+    </html>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link href="{% static 'css/extension/bootstrap.rtl.min.css' %}" rel="stylesheet" />
+    <link href="{% static 'css/main2.css' %}" rel="stylesheet" />
+    <link href="{% static 'css/extension/kamadatepicker.scss' %}" rel="stylesheet" />
+    <link href="{% static 'css/font.css' %}" rel="stylesheet" />
+    <title>خبریاب</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md">
+        <a class="navbar-brand" href="/">خبریاب</a>
+        <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#main-navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="main-navigation">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <div class="s002">
+        <form action="/search" method="get">
+            <fieldset>
+                <legend style="color: black;">خبریاب</legend>
+            </fieldset>
+            <div class="inner-form">
+                <div class="input-field first-wrap">
+                    <input id="query" name="query" type="text" placeholder="دنبال چه خبری می‌گردید؟" />
+                </div>
+                <div class="input-field second-wrap">
+                    <input class="datepicker" id="from" name="from" type="text" placeholder="1399/01/01" />
+                </div>
+                <div class="input-field third-wrap">
+                    <input class="datepicker" id="to" name="to" type="text" placeholder="1400/02/01" />
+                </div>
+                <div class="input-field fifth-wrap">
+                    <input class="btn-search" type="submit" value="بگرد!">
+                </div>
+            </div>
+        </form>
+    </div>
+    <script src="{% static 'js/extension/kamadatepicker.js' %}"></script>
+    <script src="{% static 'js/extension/jquery.js' %}"></script>
+    <script>
+        kamaDatepicker("from", { buttonsColor: "red", forceFarsiDigits: true })
+        kamaDatepicker("to", { buttonsColor: "red", forceFarsiDigits: true })
+    </script>
+</body>
+
+</html>

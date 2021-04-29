@@ -1,0 +1,47 @@
+body {
+    padding: 0;
+    margin: 0;
+    background: #F5F5F5;
+    font-family: Vazir;
+}
+
+.navbar {
+    background:#757575;
+}
+
+.nav-link,
+.navbar-brand {
+    margin-right: 16px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.nav-link {
+    margin-right: 1em !important;
+}
+
+.nav-link:hover {
+    color: #BDBDBD;
+}
+
+.navbar-collapse {
+    justify-content: flex-end;
+}
+
+.card {
+    margin: 20px;
+}
+
+.card-header {
+    background: #212121;
+    color: #fff
+}
+
+.card-body {
+    background: #BDBDBD;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+}

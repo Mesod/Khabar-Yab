@@ -5,7 +5,8 @@ class NewsAgency(models.Model):
     url = models.URLField(max_length=200)
     name = models.CharField(max_length=100)
     logo = models.ImageField()
-
+    def __str__(self):
+        return self.name
 
 class Tag(models.Model):
     name = models.CharField(max_length=100)
@@ -20,7 +21,12 @@ class News(models.Model):
     news_id = models.CharField(max_length=100)
     tags = models.ManyToManyField(Tag, null=True, blank=True)
 
+    def __str__(self):
+        return f'{self.title} - {self.agency}'
+
 
 class StartUrl(models.Model):
     agency = models.ForeignKey(NewsAgency, on_delete=models.CASCADE)
     url = models.URLField(max_length=500)
+    def __str__(self):
+        return self.url

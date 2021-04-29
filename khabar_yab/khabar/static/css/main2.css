@@ -1,0 +1,45 @@
+body {
+    padding: 0;
+    margin: 0;
+    background: #F5F5F5;
+    font-family: Vazir;
+}
+
+.navbar {
+    background:#757575;
+}
+
+.nav-link,
+.navbar-brand {
+    margin-right: 16px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.nav-link {
+    margin-right: 1em !important;
+}
+
+.nav-link:hover {
+    color: #BDBDBD;
+}
+
+.navbar-collapse {
+    justify-content: flex-end;
+}
+
+
+.s002 {
+    min-height: 100vh;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    background: url("../images/news.jpg");
+    background-size: cover;
+    background-position: center center;
+    padding: 15px;
+  }
